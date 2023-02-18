@@ -1,5 +1,6 @@
 ---
 layout: post
+author: winverse
 title:  "공변성(covariant)과 반공변성(contravariant)"
 description: 이번글을 통해서 공변성과 반공변성에 대해서 알아보며, Rust의 API를 인용하여 Typescript에서 어떻게 타입 안전(type-safety)한 코드를 작성할 수 있는지 알아봅시다.
 tags: 공변성 반공변성 covariant contravariant type level system Typescript Rust
@@ -105,7 +106,7 @@ _이 경우는 안전합니다. f(g(x))가 호출되고 나면 어떤 종류의 
 
 > G&nbsp;&nbsp;<&nbsp;&nbsp;F 이면 함수 합성에서 안전하다고 할 수 있습니다.
   
-반환 타입은 간단합니다. Greyhound는 Dog의 서브타입이다. 하지만 인자 타입은 그 `반대`다. `Animal은 Dog의 슈퍼 타입입니다!!` 이 동작 방식을 설명하면 함수 타입에서 반환 타입은 ***공변적(covariant)*** 이고, 인자 타입은 ***반공변적(contravariant)*** 인 것이 됩니다. 반환 타입의 공변성은 `A < B가 (T -> A) < (T -> B)로 적용된다는 뜻`이고 인자 타입의 반공변성은 `A < B가 (B -> T) < (A -> T)로 적용된다는 의미입니다.` 
+반환 타입은 간단합니다. Greyhound는 Dog의 서브타입이다. 하지만 인자 타입은 그 `반대`이며 `Animal은 Dog의 슈퍼 타입입니다!!` 이 동작 방식을 설명하면 함수 타입에서 반환 타입은 ***공변적(covariant)*** 이고, 인자 타입은 ***반공변적(contravariant)*** 인 것이 됩니다. 반환 타입의 공변성은 `A < B가 (T -> A) < (T -> B)로 적용된다는 뜻`이고 인자 타입의 반공변성은 `A < B가 (B -> T) < (A -> T)로 적용된다는 의미입니다.` 
 
 
 # 적용

@@ -14,7 +14,7 @@ layout: default
   </div>
   {% endif %}
   <div class="post-date">
-    Published on {{ page.date | date_to_string }}
+    Published on {{ page.date | date: "%Y, %b %-d" }}
     {% if page.author != null %}
     by {{ page.author }}
     {% endif %}

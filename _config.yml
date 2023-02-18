@@ -2,9 +2,8 @@ title: 결과보다는 왜 라는 질문을
 author: Winverse
 email: public.winverse@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I always think why is important, so I focus on why I need to write this code rather than just writing it. 
+  So before writing the code, understanding the problem and what the user wants.
 show_excerpts: false # set to true to show excerpts on the homepage
 
 paginate: 4

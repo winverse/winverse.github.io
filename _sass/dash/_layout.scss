@@ -167,6 +167,7 @@
   margin-bottom: 2em;
   .post-date {
     margin-top: 1em;
+    margin-bottom: 1em;
     @include themed() {
        color: t('foreground-color-alt');
     }
