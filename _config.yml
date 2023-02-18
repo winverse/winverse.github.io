@@ -1,6 +1,6 @@
-title: Winverse
-author: SangHyun Jang
-email: public.winvserse@gmail.com
+title: 결과보다는 왜 라는 질문을
+author: Winverse
+email: public.winverse@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -27,15 +27,15 @@ dash:
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    # - url: https://twitter.com/bitbrain_
+    # - url: https://twitter.com/winverse
     #   icon: twitter-square
     #   color: cyan
-    # - url: https://bitbrain.itch.io
+    # - url: https://winverse.itch.io
     #   icon: itch-io
     #   color: red
     - url: https://github.com/winverse
       icon: github-square
-      color: red
+      color: purple
 
   # wether the author box should be displayed
   show_author: true
@@ -47,10 +47,10 @@ dash:
   rtl: false
 
   # Replaces the default avatar provider (gravatar)
-  #avatar_source: github
-  #github_username: bitbrain
-  #avatar_source: local
-  #avatar_path: /assets/avatar.png
+  # avatar_source: github
+  # github_username: bitbrain
+  avatar_source: local
+  avatar_path: /assets/avatar.png
 
 # Build settings
 theme: jekyll-dash
