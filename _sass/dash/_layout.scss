@@ -13,7 +13,8 @@
   .command_prompt {
     color: $color-blue;
     font-size: $base-font-size;
-    margin-left: 0.1em;
+    margin-top: -0.5px;
+    margin-left: 0.3em;
 
     &:before {
       content: $icon-chevron-right;
@@ -49,6 +50,7 @@
 
 .wrapper {
   text-align: justify;
+  justify-content: center;
 }
 
 /**

@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 
-$base-font-family: 'Varela Round', sans-serif;
+$base-font-family: 'Noto Sans KR', sans-serif;
 $syntax-font-family: 'Roboto Mono', monospace;
-$base-font-size:   16px !default;
+$base-font-size:   15px !default;
 $post-link-font-size: $base-font-size * 1.25 !default;
 $base-font-weight: 500 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -49,3 +49,4 @@ $spacing-unit: 30px !default;
   "dash/dn-toggle",
   "dash/syntax-highlighting"
 ;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap')
