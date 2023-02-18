@@ -22,7 +22,7 @@ dash:
 
   # (optional) discqus comment configuration
   disqus:
-    shortname: winverse-github-io
+    shortname: winverse
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
