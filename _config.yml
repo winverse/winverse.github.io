@@ -21,8 +21,8 @@ dash:
   date_format: "%Y, %b %-d"
 
   # (optional) discqus comment configuration
-  disqus:
-    shortname: winverse
+  # disqus:
+  #   shortname: winverse
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple

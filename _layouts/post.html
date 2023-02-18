@@ -28,11 +28,16 @@ layout: default
   {{ content }}
 </div>
 
-{% if site.dash.disqus.shortname %}
 <div class="comments">
-{% include disqus.html %}
+<script src="https://utteranc.es/client.js"
+        repo="winverse/winverse.github.io"
+        issue-term="pathname"
+        label="utterances"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
 </div>
-{% endif %}
 
 {% assign size = site.related_posts | size %}
 {% if size != 0 %}
@@ -54,6 +59,7 @@ layout: default
 {% include tagcloud.html %}
 
 {% assign animation_speed = site.dash.animation_speed | default: 50 %}
+
 <script>
   let i = 0;
   const text = '{{ page.description }}';

@@ -10,7 +10,11 @@
     }
 }
 
-#disqus_thread {
+.comments {
     padding-top: 80px;
     padding-bottom: 50px
+}
+
+.site-footer > .wrapper {
+    display: none;
 }
