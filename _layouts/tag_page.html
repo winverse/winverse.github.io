@@ -12,9 +12,9 @@ layout: default
 {% for post in site.posts %}
   {% for tag in post.tags %}
     {% if tag == page.tag %}
-        <div class="post-link-wrapper">
-          {% include post-inner.html %}
-        </div>
+      <div class="post-link-wrapper">
+        {% include post-list.html %}
+      </div>
     {% endif %}
   {% endfor %}
 {% endfor %}
