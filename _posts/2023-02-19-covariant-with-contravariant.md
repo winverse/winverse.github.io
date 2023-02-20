@@ -3,7 +3,8 @@ layout: post
 author: winverse
 title:  "공변성(covariant)과 반공변성(contravariant)"
 description: 이번글을 통해서 공변성과 반공변성에 대해서 알아보며, Rust의 API를 인용하여 Typescript에서 어떻게 타입 안전(type-safety)한 코드를 작성할 수 있는지 알아봅시다.
-tags: 공변성 반공변성 covariant contravariant type level system Typescript Rust
+tags: 공변성 반공변성 covariant contravariant type-level-system Typescript Rust
+category: logic
 ---
 
 
@@ -22,7 +23,7 @@ class Greyhound extends Dog {}
 
 이것을 슈퍼(super)타입과 서브(sub)타입으로 표현한다면
 
-> Greyhound&nbsp;&nbsp; < &nbsp;&nbsp; Dog &nbsp;&nbsp; < &nbsp;&nbsp; Animal
+* Greyhound&nbsp;&nbsp; < &nbsp;&nbsp; Dog &nbsp;&nbsp; < &nbsp;&nbsp; Animal
 
 Greyhound는 Dog의 서브 타입이고 Dog는 Animal의 서브 타입입니다. 추이적 관계에 따라 Greyhound는 Animal의 서브타입니다.
 
@@ -153,9 +154,9 @@ export const isErr = <E>(value: Result<unknown, E>): value is Err<E> =>
   
   
 # Reference
-- https://github.com/microsoft/TypeScript/pull/18654
-- https://seob.dev/posts/%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80/
-- https://velog.io/@lsb156/covariance-contravariance
-- https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-6.html
-- https://www.stephanboyer.com/post/132/what-are-covariance-and-contravariance
-- https://doc.rust-lang.org/std/result/enum.Result.html
+1. [https://github.com/microsoft/TypeScript/pull/18654](https://github.com/microsoft/TypeScript/pull/18654)
+2. [https://seob.dev/posts/%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80](https://seob.dev/posts/%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
+3. [https://velog.io/@lsb156/covariance-contravariance](https://velog.io/@lsb156/covariance-contravariance)
+4. [https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-6.html](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-6.html)
+5. [https://www.stephanboyer.com/post/132/what-are-covariance-and-contravariance](https://www.stephanboyer.com/post/132/what-are-covariance-and-contravariance)
+6. [https://doc.rust-lang.org/std/result/enum.Result.html](https://doc.rust-lang.org/std/result/enum.Result.html)

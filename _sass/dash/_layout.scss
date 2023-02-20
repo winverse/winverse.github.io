@@ -132,10 +132,17 @@
 
 
 .post-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     @include themed() {
        color: t('foreground-color');
     }
     text-align: left;
+    a {
+      font-size: 20px;
+      margin-left: 20px;
+    }
 }
 
 .post-description {
@@ -256,8 +263,16 @@
 
 .post-link-wrapper {
    margin-bottom: 1.1em;
+   & > .post-inner {
+    display: flex;
+    justify-content: space-between;
+    font-size: $small-font-size;
+    a { 
+      font-size: 17px;
+      font-weight: $base-font-weight;
+    }
+   }
    & > .post-link {
-     font-size: $base-font-size;
      font-size: $post-link-font-size;
      display: inline-block;
      text-align: initial;
@@ -269,6 +284,10 @@
      }
      font-size: $small-font-size;
    }
+
+  div + div {
+    margin-top: 10px;
+  }
  }
 
  .tag-cloud {
@@ -285,7 +304,7 @@
   @include themed() {
      background-color: t('background-color');
   }
-  padding: 0.3em 0.6em;
+  padding: 0.1em 0.3em;
   border-radius: 0.3em;
   &:hover {
     text-decoration: none;
