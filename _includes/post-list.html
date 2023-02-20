@@ -1,13 +1,15 @@
 <div class="post-link-wrapper">
   <div class="post-inner">
-    <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
-    <span>
+    <div class="post-title">
+      <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+    </div>
+    <div class="post-date">
       {% if site.dash.date_format %}
         {{ post.date | date: site.dash.date_format }}
       {% else %}
         {{ post.date | date: "%b %-d, %Y" }}
       {% endif %}
-    </span>
+    </div>
   </div>
   <div class="post-meta">
     {% if site.show_excerpts == true %}

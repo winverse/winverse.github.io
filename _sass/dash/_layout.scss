@@ -140,7 +140,6 @@
        color: t('foreground-color');
     }
     text-align: left;
-    
 }
 
 .post-description {
@@ -260,28 +259,42 @@
 }
 
 .post-link-wrapper {
-   margin-bottom: 1.1em;
-   & > .post-inner {
+  margin-bottom: 1.1em;
+  & > .post-inner {
     display: flex;
     justify-content: space-between;
     font-size: $small-font-size;
-    a { 
+    .post-title {
+      white-space: pre;
       font-size: 17px;
       font-weight: $base-font-weight;
     }
-   }
-   & > .post-link {
-     font-size: $post-link-font-size;
-     display: inline-block;
-     text-align: initial;
-   }
 
-   & > .post-meta {
-     @include themed() {
-        color: t('foreground-color-alt');
-     }
-     font-size: $small-font-size;
-   }
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column-reverse;
+      .post-title {
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 375px) {
+      .post-title {
+        font-size: 16px;
+      }
+    }
+  }
+  & > .post-link {
+    font-size: $post-link-font-size;
+    display: inline-block;
+    text-align: initial;
+  }
+
+  & > .post-meta {
+    @include themed() {
+      color: t('foreground-color-alt');
+    }
+    font-size: $small-font-size;
+  }
 
   div + div {
     margin-top: 10px;
