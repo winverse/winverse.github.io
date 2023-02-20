@@ -16,38 +16,13 @@
 </div>
 <script type="text/javascript">
 const theme = 'dark';
-
 document.documentElement.setAttribute('data-theme', 'dark');
-const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
-
 function activateDarkTheme() {
     document.getElementById('theme-toggle').checked = true;
     document.documentElement.setAttribute('data-theme', 'dark');
     document.documentElement.classList.add('theme--dark');
     document.documentElement.classList.remove('theme--light');
 	document.getElementById("theme-toggle").className = 'light';
-	// window.localStorage.setItem('theme', 'dark');
 }
-
-function activateLightTheme() {
-    document.getElementById('theme-toggle').checked = false;
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.documentElement.classList.add('theme--light');
-    document.documentElement.classList.remove('theme--dark');
-	document.getElementById("theme-toggle").className = 'dark';
-}
-
-// if (theme === "dark") {
-//     activateDarkTheme();
-// } else if (theme === "light") {
-//     activateLightTheme();
-// } else if  (userPrefers === "light") {
-//     activateDarkTheme();
-// } else {
-//     activateDarkTheme();
-// }
-
-function modeSwitcher() {
-	activateLightTheme();
-}
+activateDarkTheme()
 </script>
