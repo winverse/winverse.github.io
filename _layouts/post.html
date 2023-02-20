@@ -21,7 +21,9 @@ layout: default
   </div>
   {% if page.description != null %}
   <noscript>
-    <div class="post-description">{{ page.description }}</div>
+    <div class="post-description">
+      {{ page.description }}
+    </div>
   </noscript>
   <div id="animated-post-description" class="post-description" style="display: none;"></div>
   {% endif %}

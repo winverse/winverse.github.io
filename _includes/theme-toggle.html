@@ -17,11 +17,7 @@
 <script type="text/javascript">
 const theme = 'dark';
 
-if (theme === "light") {
-    document.documentElement.setAttribute('data-theme', 'light');
-} else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
+document.documentElement.setAttribute('data-theme', 'dark');
 const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
 
 function activateDarkTheme() {
@@ -39,11 +35,7 @@ function activateLightTheme() {
     document.documentElement.classList.add('theme--light');
     document.documentElement.classList.remove('theme--dark');
 	document.getElementById("theme-toggle").className = 'dark';
-	window.localStorage.setItem('theme', 'light');
 }
-
-console.log('set dark');
-activateDarkTheme();
 
 // if (theme === "dark") {
 //     activateDarkTheme();
@@ -56,11 +48,6 @@ activateDarkTheme();
 // }
 
 function modeSwitcher() {
-	let currentMode = document.documentElement.getAttribute('data-theme');
-	if (currentMode === "dark") {
-	    activateLightTheme();
-	} else {
-	    activateDarkTheme();
-	}
+	activateLightTheme();
 }
 </script>
