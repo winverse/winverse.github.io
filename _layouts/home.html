@@ -5,18 +5,17 @@ layout: default
   {% include author.html %}
 {% endunless %}
 {{ content }}
+
 {% assign posts_count = paginator.posts | size %}
-{% if posts_count > 0 %}
-<h1>최신 글</h1>
+  {% if posts_count > 0 %}
+    <h1 class="post-title">최신 글</h1>
     <div class="post-links">
       {% for post in paginator.posts %}
         {% include post-list.html %}
       {% endfor %}
     </div>
-
     {% include pagination.html %}
-
     {% include tagcloud.html %}
-{% else %}
-<h2>no posts yet.</h2>
-{% endif %}
+  {% else %}
+    <h2>no posts yet.</h2>
+  {% endif %}

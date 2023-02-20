@@ -45,7 +45,8 @@
 }
 
 .site-footer {
-  margin-bottom: 2em
+  margin-bottom: 2em;
+  display: none;
 }
 
 .wrapper {
@@ -139,10 +140,7 @@
        color: t('foreground-color');
     }
     text-align: left;
-    a {
-      font-size: 20px;
-      margin-left: 20px;
-    }
+    
 }
 
 .post-description {

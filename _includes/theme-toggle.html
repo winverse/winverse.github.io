@@ -15,7 +15,7 @@
     </label>
 </div>
 <script type="text/javascript">
-const theme = localStorage.getItem('theme');
+const theme = 'dark';
 
 if (theme === "light") {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -30,7 +30,7 @@ function activateDarkTheme() {
     document.documentElement.classList.add('theme--dark');
     document.documentElement.classList.remove('theme--light');
 	document.getElementById("theme-toggle").className = 'light';
-	window.localStorage.setItem('theme', 'dark');
+	// window.localStorage.setItem('theme', 'dark');
 }
 
 function activateLightTheme() {
@@ -42,15 +42,18 @@ function activateLightTheme() {
 	window.localStorage.setItem('theme', 'light');
 }
 
-if (theme === "dark") {
-    activateDarkTheme();
-} else if (theme === "light") {
-    activateLightTheme();
-} else if  (userPrefers === "light") {
-    activateDarkTheme();
-} else {
-    activateDarkTheme();
-}
+console.log('set dark');
+activateDarkTheme();
+
+// if (theme === "dark") {
+//     activateDarkTheme();
+// } else if (theme === "light") {
+//     activateLightTheme();
+// } else if  (userPrefers === "light") {
+//     activateDarkTheme();
+// } else {
+//     activateDarkTheme();
+// }
 
 function modeSwitcher() {
 	let currentMode = document.documentElement.getAttribute('data-theme');
