@@ -45,7 +45,7 @@ figure {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: lighten($color-blue, 0%);
+  color: lighten($color-blue, 5%);
 }
 
 /**
@@ -134,7 +134,7 @@ blockquote {
   @include themed() {
         color: t('background-color');
   }
-  @include relative-font-size(1.125);
+  @include relative-font-size(1.0025);
   letter-spacing: -1px;
   font-style: italic;
 
