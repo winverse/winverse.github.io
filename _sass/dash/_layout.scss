@@ -137,7 +137,7 @@
     justify-content: flex-start;
     align-items: center;
     // color: $color-blue;
-    color: #DAE4ED;
+    // color: #DAE4ED;
     text-align: left;
 }
 
@@ -191,6 +191,10 @@
   img {
     border-radius: 0.3em;
     width: 100%;
+    @media (max-width: 425px) {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
   ol > li {
