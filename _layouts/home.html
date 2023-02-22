@@ -11,7 +11,9 @@ layout: default
     <h1 class="post-title">최신 글</h1>
     <div class="post-links">
       {% for post in paginator.posts %}
-        {% include post-list.html %}
+        {% if post.is_published == true %}
+          {% include post-list.html %}
+        {% endif %}
       {% endfor %}
     </div>
     {% include pagination.html %}
