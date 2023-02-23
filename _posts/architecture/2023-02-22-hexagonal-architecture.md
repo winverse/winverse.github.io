@@ -27,7 +27,7 @@ is_published: true
 ## 1-3. 쉬워지는 테스트
 현대 시대에서 큰 소프트웨어를 운용하는데 있어서 정확성과 안정성을 가져다주는 테스트 코드는 빠질 수 없는 부분입니다. 아키텍처를 통해서 관심사를 분리하고 여러 부분들을 알맞게 나누어서 모듈화 된 부분들은 각 부분 테스트에만 신경쓰면 되기 때문에 테스트에 용이해지는 장점이 있습니다.
 
-## 1-5. 좋은 아키텍처를 도입해야하는 이유
+## 1-4. 좋은 아키텍처를 도입해야하는 이유
 좋은 아키텍처를 도입한다는 것은 위의 장점을 가져간다는 것들이 오랜 기간 소프트웨어를 운용하는데 있어서 꼭 필요한 요소들이므로 우리는 좋은 아키텍처를 만들기 위해서 상당히 오랜 공을 들여야 한다는 사실을 알 수 있습니다. 
 
 # 2.Layered Architecture (계층형 아키텍처)
@@ -47,7 +47,7 @@ is_published: true
 
 ## 2-2. Layered Architecture의 한계
 Layered Architecture의 프로그램 진행 방향(화살표)을 따르게 되면 연쇄적인 참조 효과가 발생하는 것을 알 수 있다(Web -> Domain -> Persistence or Persistence -> Domain -> Web).
-이렇게 서로가 서로를 참조하게 되면 Web이던 Domain이던 Persistence이던 서로 영향을 미치므로 변화하는 환경에 대응하기 힘들어진다. 왜냐하면 결국 Persistence계층에서 변경이 일어나게 되면 Web에서도 변경이 일어나야하기 때문이다. 또한 이런 구조는 서로 영향을 미치므로 테스트하는 것 또한 쉽지 않은 일이다. 이 두가지의 일들은 결코 아키텍처의 목표라고 할 수 없습니다.
+이렇게 서로가 서로를 참조하게 되면 Web이던 Domain이던 Persistence이던 서로 영향을 미치므로 변화하는 환경에 대응하기 힘들어집ㅣ다. 왜냐하면 결국 Persistence계층에서 변경이 일어나게 되면 Web에서도 변경이 일어나야하기 때문입니다. 또한 이런 구조는 서로 영향을 미치므로 테스트하는 것 또한 쉽지 않은 일입니다. 이 두가지의 일들은 결코 아키텍처의 목표라고 할 수 없습니다.
 
 # 3.Clean Architecture
 <img src="https://bit.ly/3SnCSv1"  alt="clean Architecture" style="width: 500px; height: 350px;">
@@ -55,11 +55,17 @@ Layered Architecture의 프로그램 진행 방향(화살표)을 따르게 되�
 [출처: Uncle-bob](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 ## 3-1 Clean Architecture 특징
-<img src="https://bit.ly/3xHyHkr"  alt="clean Architecture" style="width: 500px; height: 270px;">
+클린 아키텍처는 시스템의 구성요소들을 독립적으로 관리할 수 있도록 하기 위해 관심사의 분리(Separation of Concerns)를 강조합니다. 이 방법론에서는 시스템을 도메인 레이어, 애플리케이션 레이어, 인터페이스 레이어 등의 다양한 레이어로 나누어 관리하며, 각 레이어는 내부와 외부로 나누어지며 의존성의 방향은 항상 내부에서 외부로 향하도록 설계합니다.
 
+## 3-2 Clean Architecture 구성요소
 ### Entity
 Enterprise Business Rules은 비즈니스 전반에 걸쳐 적용되는 고수준의 규칙으로, 여러 응용 프로그램 또는 시스템 간에 공유됩니다. Frameworks and Drivers의 컴포넌트를 통해서 구현되는데 이 컴포넌트는 애플리케이션의 외부에서 영향을 미치는 요소를 다루는 데 사용됩니다. 예를 들어, 프레임워크는 보안 및 인증 규칙, 데이터 액세스 및 연결 관리 등과 같은 관심사를 다루는 데 사용됩니다.
 엔티티(Entity)는 Enterprise Business Rules을 캡슐화합니다. 가장 일반적인 규칙과 높은 수준의 규칙을 캡슐화하며 외부적인 것이 변할 때 `가장 덜 변합니다.` 가장 안쪽에 독립적으로 구성하여 외부의 변경으로 부터 보호합니다.
+
+#### [부록] Frameworks and Drivers
+Frameworks and Drivers는 시스템의 인터페이스를 처리하는 부분을 나타냅니다. 이러한 인터페이스는 사용자와 시스템 자원 간의 상호작용을 가능하게 하며, Frameworks and Drivers는 이러한 상호작용을 처리하기 위해 존재합니다. Frameworks는 웹 프레임워크, 데이터베이스 연결 라이브러리 등과 같은 외부 라이브러리나 프레임워크를 말합니다. 이러한 Frameworks는 시스템에서 사용자와 상호작용하거나, 데이터를 저장하거나, 비즈니스 로직을 처리하는 데 사용됩니다.
+반면에 Drivers는 Frameworks와는 반대로 시스템과 외부 자원 간의 인터페이스를 처리하는 역할을 합니다. 예를 들어, 데이터베이스 드라이버나 웹 서버와 같은 것들이 Drivers에 속합니다.
+이러한 Frameworks and Drivers는 시스템의 비즈니스 로직을 분리하는 데 중요한 역할을 하게 됩니다. 
 
 ### Use Cases
 Application Business Rules은 소프트웨어 애플리케이션의 핵심 로직이며, 비즈니스 도메인의 요구사항을 구현하는 데 사용됩니다. Use Cases에는 응용 프로그램별 비즈니스 규칙이 포함되어 있습니다. 엔티티 간의 데이터 흐름을 조정하고 이러한 엔티티가 전사적 비즈니스 규칙을 사용하여 사용 사례의 목표를 달성하도록 지시합니다. 이 계층의 변화가 엔티티에 영향을 미칠 것으로 예상하지 않습니다만 애플리케이션 운영에 대한 변경 사항이 사용 사례에 영향을 미칠 것으로 예상됩니다.
@@ -67,7 +73,9 @@ Application Business Rules은 소프트웨어 애플리케이션의 핵심 로�
 ### Interface Adapters
 이 계층의은 데이터를 사용하는 가장 편리한 형식에서 데이터베이스 또는 웹과 같은 일부 외부 기관의 형식으로 변환하는 어댑터 집합이며 `인터페이스(약속) 역할`을 한다고 볼 수 있습니다. UseCase는 오직 어댑터를 통해서 외부와 연결됩니다. 어댑터는 외부의 데이터 흐름을 내부 도메인에서 사용할 수 있는 데이터 형식으로 인터페이스를 통해 변환해주는 역할을 합니다. 이렇게 어댑터를 통해서 데이터 형식으로 변환해주는 과정을 *의존성 역전(Dependency Inversion)법칙*을 통해 이루어 집니다.
 
-## 3-2 Clean Architecture 장점
+<img src="https://bit.ly/3xHyHkr"  alt="clean Architecture" style="width: 500px; height: 270px;">
+
+## 3-3 Clean Architecture 장점
 - 의존성이 Use Case로만 향하기 때문에 세부사항 변경 시 도메인 계층이 업무 규칙에 영향을 받지 않습니다.
 - 인터페이스를 통한 의존성 역전 법칙을 이용하기 때문에 컴포넌트 간의 결합도를 줄이고 코드를 이해하기 쉽게 만들어줍니다.
 - 엔티티는 가장 영향을 받지 않는 쪽에 있기 때문에, 바깥쪽 세부 사항을 독립적으로 손쉽게 변경이 가능합니다.
@@ -75,9 +83,16 @@ Application Business Rules은 소프트웨어 애플리케이션의 핵심 로�
 - 가장 중요한 것은 업무 규칙(Entity)이 세부 사항을 변경해도 영향을 받지 않는 다는 것 입니다.
 
 # 4.Hexagonal architecture
+<img src="https://bit.ly/3xKISof"  alt="hexagonal Architecture" style="width: 500px; height: 270px;">
 
+## 4-1.특징
+Hexagonal architecture 혹은 Ports and Adapters Architecture라고 불리는 아키텍처는 클린 아키텍처의 원칙을 기반으로 하며, 특히 in & out port와 어댑터를 통한 `인터페이스`를 더욱 강조하여 안팎의 관심사를 분리하고 독립적으로 각자의 역할에 충실하기 위한 방안입니다. 또한 의존성 방향이 클린 아키텍처와 마찬가지로 안쪽으로만 향하도록 하여 외부의 변화로부터 내부의 핵심 업무 규칙 즉 도메인을 철저하게 보호하게 됩니다.
 
-# 5.디자인 스태미너 가설 (feat: martin fowler)
+## 4-2.구성요소
+대개 Clean Architecture 구성요소와 내용이 같으며 port를 통한 인터페이스 관리 정도의 차이만 있을 뿐입니다.
+
+## 4-3.정리
+Hexagonal architecture에서는 인터페이스를 표준화하고, 외부와 내부를 분리하여 시스템의 유연성과 확장성을 높이기 위한 방법론입니다. 이 패턴은 애플리케이션을 여러 계층으로 나누어 의존성을 분리하고, 유지 보수와 확장성을 쉽게 만들어 줍니다.
 
 # 참고
 1. [https://blog.jiniworld.me/176](https://blog.jiniworld.me/176)
