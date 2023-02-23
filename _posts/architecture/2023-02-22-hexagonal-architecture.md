@@ -1,7 +1,7 @@
 ---
 layout: post
 author: winverse
-title:  "Software architecture에 대해서"
+title:  "Architecture"
 description: 이번 글을 통해서 Hexagonal architecture에 대해서 알아보며 기존에 어떤 문제점이 있었는지 그리고 어떤 문제를 해결하였는지 왜 Hexagonal architecture가 필요한지에 대해서 알아보겠습니다.
 tags: Architecture Layerd-architecture Hexagonal-architecture Clean-architecture 
 category: architecture
