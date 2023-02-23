@@ -8,16 +8,7 @@ is_published: false
 ```python
 ```
 해설
-```
-```
-
-# [블랙잭](https://www.acmicpc.net/submit/2798)
-나의 풀이
-```
-
-```
-해설
-```
+```python
 ```
 
 # [음계](https://www.acmicpc.net/submit/2920)
