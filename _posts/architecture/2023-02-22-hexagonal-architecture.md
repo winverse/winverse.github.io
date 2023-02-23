@@ -43,11 +43,10 @@ is_published: true
 {% endhighlight markdown %}  
 
 # 2-1. Layered Architecture 특징
-전통적인 Layered Architecture은 목적이 같은 코드들을 같은 계층으로 그룹화 시켜서 분리하는 것을 의미 합니다. 예를 들어 프레젠테이션 계층(Ui 같은), 도메인 계층(중요 비즈니스 로직), 영속성 계층으로 나누어 볼 수 있습니다. 이렇게 나누어진 잘 나누어진 Layer는 다른 Layer층에 기능적 영향을 주는 것 없이 새로운 기능을 추가할 수 있다는 장점과 문제가 생기면 어느 부분에서 문제가 생기는지 알 수 있는 장점이 있습니다. 이를 통해서 `핵심 가치`를 고객에게 전달 할 수 있습니다.
+전통적인 Layered Architecture은 목적이 같은 코드들을 같은 계층으로 그룹화 시켜서 분리하는 것을 의미 합니다. 예를 들어 프레젠테이션 계층(UI 같은), 도메인 계층(중요 비즈니스 로직), 영속성 계층으로 나누어 볼 수 있습니다. 이렇게 나누어진 잘 나누어진 Layer는 다른 Layer층에 기능적 영향을 주는 것 없이 새로운 기능을 추가할 수 있다는 장점과 문제가 생기면 어느 부분에서 문제가 생기는지 알 수 있는 장점이 있습니다. 이를 통해서 `핵심 가치`를 고객에게 전달 할 수 있습니다.
 
 ## 2-2. Layered Architecture의 한계
-Layered Architecture의 프로그램 진행 방향(화살표)을 따르게 되면 연쇄적인 참조 효과가 발생하는 것을 알 수 있다(Web -> Domain -> Persistence or Persistence -> Domain -> Web).
-이렇게 서로가 서로를 참조하게 되면 Web이던 Domain이던 Persistence이던 서로 영향을 미치므로 변화하는 환경에 대응하기 힘들어집ㅣ다. 왜냐하면 결국 Persistence계층에서 변경이 일어나게 되면 Web에서도 변경이 일어나야하기 때문입니다. 또한 이런 구조는 서로 영향을 미치므로 테스트하는 것 또한 쉽지 않은 일입니다. 이 두가지의 일들은 결코 아키텍처의 목표라고 할 수 없습니다.
+Layered Architecture의 프로그램 진행 방향(화살표)을 따르게 되면 연쇄적인 참조 효과가 발생하는 것을 알 수 있습니다(Web -> Domain -> Persistence or Persistence -> Domain -> Web). 이렇게 서로가 서로를 참조하게 되면 Web이던 Domain이던 Persistence이던 서로 영향을 미치므로 변화하는 환경에 대응하기 힘들어 집니다. 왜냐하면 결국 Persistence 계층에서 변경이 일어나게 되면 Web에서도 변경이 일어나야하기 때문입니다. 또한 이런 구조는 서로 영향을 미치므로 테스트하는 것 또한 쉽지 않은 일입니다. 이 두 가지의 일들은 결코 아키텍처의 목표라고 할 수 없습니다.
 
 # 3.Clean Architecture
 <img src="https://bit.ly/3SnCSv1"  alt="clean Architecture" style="width: 500px; height: 350px;">
@@ -55,7 +54,7 @@ Layered Architecture의 프로그램 진행 방향(화살표)을 따르게 되�
 [출처: Uncle-bob](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 ## 3-1 Clean Architecture 특징
-클린 아키텍처는 시스템의 구성요소들을 독립적으로 관리할 수 있도록 하기 위해 관심사의 분리(Separation of Concerns)를 강조합니다. 이 방법론에서는 시스템을 도메인 레이어, 애플리케이션 레이어, 인터페이스 레이어 등의 다양한 레이어로 나누어 관리하며, 각 레이어는 내부와 외부로 나누어지며 의존성의 방향은 항상 내부에서 외부로 향하도록 설계합니다.
+클린 아키텍처는 시스템의 구성요소들을 독립적으로 관리할 수 있도록 하기 위해 관심사의 분리(Separation of Concerns)를 강조합니다. 이 방법론에서는 시스템을 도메인 레이어, 애플리케이션 레이어, 인터페이스 레이어 등의 다양한 레이어로 나누어 관리하며, 각 레이어는 내부와 외부로 나누어지며 의존성의 방향은 항상 외부에 내부로 향하도록 설계합니다.
 
 ## 3-2 Clean Architecture 구성요소
 ### Entity
