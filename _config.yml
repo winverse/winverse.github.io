@@ -17,7 +17,7 @@ tag_page_dir: tag
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 dash:
   # the way how dates should be displayed
-  date_format: "%Y, %b %-d"
+  date_format: "%Y %b %-d"
 
   # (optional) discqus comment configuration
   # disqus:
