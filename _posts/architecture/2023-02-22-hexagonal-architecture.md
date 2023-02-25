@@ -49,7 +49,7 @@ is_published: true
 Layered Architecture의 프로그램 진행 방향(화살표)을 따르게 되면 연쇄적인 참조 효과가 발생하는 것을 알 수 있습니다(Web -> Domain -> Persistence or Persistence -> Domain -> Web). 이렇게 서로가 서로를 참조하게 되면 Web이던 Domain이던 Persistence이던 서로 영향을 미치므로 변화하는 환경에 대응하기 힘들어 집니다. 왜냐하면 결국 Persistence 계층에서 변경이 일어나게 되면 Web에서도 변경이 일어나야하기 때문입니다. 또한 이런 구조는 서로 영향을 미치므로 테스트하는 것 또한 쉽지 않은 일입니다. 이 두 가지의 일들은 결코 아키텍처의 목표라고 할 수 없습니다.
 
 # 3.Clean Architecture
-<img src="../../assets/images/clean-architecture.png"  alt="clean Architecture" style="width: 500px; height: 350px;">
+<img src="https://bit.ly/3knIlpo"  alt="clean Architecture" style="width: 500px; height: 350px;">
 
 [출처: Uncle-bob](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
@@ -72,8 +72,6 @@ Application Business Rules은 소프트웨어 애플리케이션의 핵심 로�
 ### Interface Adapters
 이 계층의은 데이터를 사용하는 가장 편리한 형식에서 데이터베이스 또는 웹과 같은 일부 외부 기관의 형식으로 변환하는 어댑터 집합이며 `인터페이스(약속) 역할`을 한다고 볼 수 있습니다. UseCase는 오직 어댑터를 통해서 외부와 연결됩니다. 어댑터는 외부의 데이터 흐름을 내부 도메인에서 사용할 수 있는 데이터 형식으로 인터페이스를 통해 변환해주는 역할을 합니다. 이렇게 어댑터를 통해서 데이터 형식으로 변환해주는 과정을 *의존성 역전(Dependency Inversion)법칙*을 통해 이루어 집니다.
 
-<img src="https://bit.ly/3xHyHkr"  alt="clean Architecture" style="width: 500px; height: 270px;">
-
 ## 3-3 Clean Architecture 장점
 - 의존성이 Use Case로만 향하기 때문에 세부사항 변경 시 도메인 계층이 업무 규칙에 영향을 받지 않습니다.
 - 인터페이스를 통한 의존성 역전 법칙을 이용하기 때문에 컴포넌트 간의 결합도를 줄이고 코드를 이해하기 쉽게 만들어줍니다.
@@ -82,7 +80,7 @@ Application Business Rules은 소프트웨어 애플리케이션의 핵심 로�
 - 가장 중요한 것은 업무 규칙(Entity)이 세부 사항을 변경해도 영향을 받지 않는 다는 것 입니다.
 
 # 4.Hexagonal architecture
-<img src="../../assets/images/hexagonal-architecture.png"  alt="hexagonal Architecture" style="width: 500px; height: 270px;">
+<img src="https://bit.ly/41p0F1M"  alt="hexagonal Architecture" style="width: 500px; height: 270px;">
 
 ## 4-1.특징
 Hexagonal architecture 혹은 Ports and Adapters Architecture라고 불리는 아키텍처는 클린 아키텍처의 원칙을 기반으로 하며, 특히 in & out port와 어댑터를 통한 `인터페이스`를 더욱 강조하여 안팎의 관심사를 분리하고 독립적으로 각자의 역할에 충실하기 위한 방안입니다. 또한 의존성 방향이 클린 아키텍처와 마찬가지로 안쪽으로만 향하도록 하여 외부의 변화로부터 내부의 핵심 업무 규칙 즉 도메인을 철저하게 보호하게 됩니다.
