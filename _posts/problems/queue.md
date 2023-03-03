@@ -11,7 +11,7 @@ is_published: false
 ```python
 ```
 
-# [프린터 큐]()
+# [프린터 큐](https://www.acmicpc.net/problem/1966)
 나의 풀이
 ```python
 test_count = int(input())
