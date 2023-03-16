@@ -32,7 +32,7 @@ class A {
 ## 1. 생성자 주입(Constructor Injection)
 생성자 주입은 객체가 생성될 때 의존성을 전달하는 방식입니다. 이 방식은 객체가 생성되는 시점에 필요한 모든 의존성이 전달되므로 객체의 불완전한 상태를 방지할 수 있습니다.
 
-```typescript
+```ts
 class SomeClass {
   private dependency: Dependency;
 
@@ -45,7 +45,7 @@ class SomeClass {
 ## 2. Setter 주입(Setter Injection)
 Setter 주입은 객체가 생성된 후 setter 메소드를 통해 의존성을 전달하는 방식입니다. 이 방식은 객체가 생성된 후에도 의존성을 변경할 수 있어 유연성이 높습니다.
 
-```typescript
+```ts
 class SomeClass {
   private dependency: Dependency;
 
@@ -58,7 +58,7 @@ class SomeClass {
 ## 3. Interface 주입(Interface Injection)
 Interface 주입은 인터페이스를 통해 의존성을 전달하는 방식입니다. 이 방식은 인터페이스를 구현하는 클래스들이 동일한 방법으로 의존성을 전달받게 되어 일관성이 유지됩니다. 
 
-```typescript
+```ts
 interface SomeInterface {
   setDependency(dependency: Dependency): void;
 }
