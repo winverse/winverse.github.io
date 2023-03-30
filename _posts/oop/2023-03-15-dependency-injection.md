@@ -3,7 +3,7 @@ layout: post
 author: winverse
 title:  "Dependency Injection과 IoC container"
 description: Dependency Injection, DIP, IoC container의 관계를 알아보자.
-tags: Dependency-Injection IoC-container, 의존성주입, 제어의역전, DIP
+tags: Dependency-Injection IoC-container 의존성주입 제어의역전 DIP
 category: oop
 is_published: true
 ---
