@@ -176,8 +176,9 @@ front 코드는 결국 browser에서 작동하기 때문에 docker network를 �
 ## 5-3. 코드 수정
 ```js
 # back에서 mongodb와 connect 하기 위해서는 컨테이너 이름이 들어가야 한다.
+const mongoContainerName = 'mongo';
 mongoose.connect(
-  `mongodb://${mongo-container-name}:27017/course-goals`,
+  `mongodb://${mongoContainerName}:27017/course-goals`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
