@@ -130,7 +130,10 @@ docker run -rm -d -p 27017:27017 --name mongo mongo
 ```
 
 # 4. 문제 발생
-이렇게 각 컨테이너를 따로 구축하게 되면 network 역시 따로 생성되기 때문에 back에서는 mongoDB를 인식할 수 없게 됩니다. 그래서 `localhost:27017` 부분을 `host.docker.internal:27017`으로 수정합니다.
+이렇게 각 컨테이너를 따로 생성하게 되면 때문에 back 내부 container에서는 mongoDB를 인식할 수 없게 됩니다. 그래서 `localhost:27017` 부분을 `host.docker.internal:27017`으로 수정합니다.
+
+## 4-1. host.docker.internal
+host.docker.internal은 Docker for Windows와 Docker for Mac에서 호스트 시스템의 IP 주소를 참조하는 데 사용되는 특수 DNS 이름입니다. 이 이름을 사용하면 컨테이너에서 호스트 시스템의 서비스에 접근할 수 있습니다. 하지만 이 방법은 Docker for Windows와 Docker for Mac에서만 작동하며 Linux에서는 작동하지 않습니다. Linux에서는 다른 방법을 사용해야 합니다.
 
 ```javascript
 # 주소 수정
@@ -143,9 +146,6 @@ mongoose.connect(
 );
 ```
 그런데 이렇게 하게 되면 또한 로컬에서는 작동 시킬 수 없는 단점이 있습니다. 
-이것을 해결하기 위해서 다음과 같은 방법을 고려 할 수 있습니다.
-1. if 문을 이용하여 connect주소를 처리하는 방법
-2. Network를 활용하여 해결하는 방법
 
 # 5. Network 활용 해보기
 
