@@ -123,7 +123,7 @@ docker images
 docker run -it --rm -d -p 3000:3000 --name front front
 
 # back
-dcoker run -it --rm -d -p 80:80 --name back back
+docker run -it --rm -d -p 80:80 --name back back
 
 # mongo
 docker run -rm -d -p 27017:27017 --name mongo mongo
