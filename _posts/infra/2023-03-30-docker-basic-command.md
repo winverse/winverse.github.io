@@ -1,7 +1,7 @@
 ---
 layout: post
 author: winverse
-title:  "[Docker] 기본 개념 정리 및 자주 사용하는 Command"
+title:  "1. [Docker] 기본 개념 정리 및 자주 사용하는 Command"
 description: "왜 Docker를 사용해야하는지, Image와 Container의 개념을 이해하고 자주 사용하는 Command를 정리합니다."
 tags: docker
 category: infra
@@ -153,3 +153,7 @@ docker run -d --name my-container --network my-network my-image
 docker network connect my-network my-container
 ```
 이제 my-container 컨테이너는 my-network 네트워크에 연결되어 있습니다.
+
+
+# 시리즈
+- [2. [Docker] 다중 컨테이너 애플리케이션 구축하기](/infra/2023/03/30/docker-handle-multi-container.html)
