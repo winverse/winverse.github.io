@@ -11,7 +11,8 @@ body {
   flex-direction: column;
 
   @include themed() {
-      background-color: t('background-color-alt');
+      // background-color: t('background-color-alt');
+      background-color: black;
       color: t('foreground-color');
   }
 }

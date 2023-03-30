@@ -206,17 +206,18 @@
   ul > li {
     text-align: left;
     margin-bottom: 0.6em;
-    @include themed() {
-       color: t('list-primary');
-    }
-    list-style: none;
-    margin-left: 0;
+    // @include themed() {
+    //    color: t('list-primary');
+    // }
+    color: white;
+    list-style: inherit;
+    margin-left: 10px;
 
-    &:before {
-      content: $icon-check;
-      @include font-awesome-icon;
-      margin-right: 0.5em;
-    }
+    // &:before {
+    //   content: $icon-check;
+    //   @include font-awesome-icon;
+    //   margin-right: 0.5em;
+    // }
   }
 
   ul, ol {
