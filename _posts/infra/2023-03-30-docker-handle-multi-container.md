@@ -9,9 +9,9 @@ is_published: true
 ---
 
 # 1. 다중 컨테이너를 운영하기 위해서 필수로 알아야하는 지식
-1. Images
+1. Image
 2. Container
-3. Volume (Named Volume)
+3. Volume
 4. Network
 
 # 2. 다중 컨테이너 운영하기 위한 Code
