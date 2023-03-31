@@ -223,8 +223,11 @@ docker run --name react-front \
 docker run --name node-back \
   -e MONGODB_USERNAME=max \
   -e MONGODB_PASSWORD=secret \
-  -v logs:/app/logs \
+  # Named volume
+  -v logs:/app/logs \ 
+  # Bind Mounts Volume
   -v ${pwd}/src:/app \
+  # Anonymouse Volume
   -v /app/node_modules \
   --rm \
   -d \
