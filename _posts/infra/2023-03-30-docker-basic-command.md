@@ -113,6 +113,7 @@ Bind Mounts는 도커 호스트의 파일이나 디렉토리를 컨테이너의 
 
 Bind Mounts는 docker run 명령어에서 -v 플래그를 사용하여 설정할 수 있습니다. 예를 들어 `docker run -v /path/on/host:/path/in/container`와 같이 실행하면 호스트의 /path/on/host 디렉토리가 컨테이너의 /path/in/container 디렉토리에 마운트됩니다.
 
+Bind Mounts를 이용하여 개발 중인 애플리케이션에 대한 코드가 컨테이너의 재시작 없이 즉각적으로 반영하도록 할 수 있습니다.
 
 ```sh
 # /path/on/host를 바꿀 수 있음, 단 shell 환경에서만 가능합니다
