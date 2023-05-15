@@ -6,3 +6,5 @@ Gemfile.lock
 *.gem
 *.idea
 .jekyll-cache
+
+.DS_Store
