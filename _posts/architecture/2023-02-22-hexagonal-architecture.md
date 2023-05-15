@@ -1,11 +1,15 @@
 ---
-layout: post
 author: winverse
 title:  "Architecture"
-description: 이번 글을 통해서 Hexagonal architecture 대해서 알아 보며 기존에 어떤 문제점이 있었는지 그리고 어떤 문제를 해결하였는지 왜 Hexagonal architecture가 필요한지에 대해서 알아보겠습니다.
-tags: Architecture Layered-architecture Hexagonal-architecture Clean-architecture 
-category: architecture
+tags: 
+  - Architecture 
+  - Layered-architecture 
+  - Hexagonal-architecture 
+  - Clean-architecture 
+categories: 
+  - architecture
 is_published: true
+toc: true
 ---
 
 > `이 글은 아키텍처에 관해서 알아보며 정리한 글 이며 저의 뇌피셜이 어느 정도 포함되어 있습니다.`

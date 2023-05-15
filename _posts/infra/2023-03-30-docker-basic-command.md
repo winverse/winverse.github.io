@@ -1,5 +1,4 @@
 ---
-layout: post
 author: winverse
 title:  "[Docker] 기본 개념 정리 및 자주 사용하는 Command"
 categories: 
@@ -7,6 +6,7 @@ categories:
 tags: 
     - docker
 is_published: true
+toc: true
 ---
 
 # 여기서 배우게 될 것들
