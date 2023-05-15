@@ -6,7 +6,6 @@ tags:
 categories: 
   - infra
 is_published: true
-toc: true
 ---
 
 # 1. 다중 컨테이너를 운영하기 위해서 필수로 알아야하는 지식

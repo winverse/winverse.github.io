@@ -11,7 +11,6 @@ tags:
 categories: 
   - oop
 is_published: true
-toc: true
 ---
 
 # 1. 문제 인식

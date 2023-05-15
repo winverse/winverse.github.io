@@ -8,8 +8,7 @@ tags:
   - Clean-architecture 
 categories: 
   - architecture
-is_published: true
-toc: true
+is_published: false
 ---
 
 > `이 글은 아키텍처에 관해서 알아보며 정리한 글 이며 저의 뇌피셜이 어느 정도 포함되어 있습니다.`

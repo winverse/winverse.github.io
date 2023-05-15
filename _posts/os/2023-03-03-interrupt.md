@@ -8,7 +8,6 @@ tags:
 category: 
   - os
 is_published: true
-toc: true
 ---
 
 # 외부 인터럽트

@@ -6,7 +6,6 @@ categories:
 tags: 
     - docker
 is_published: true
-toc: true
 ---
 
 # 여기서 배우게 될 것들
