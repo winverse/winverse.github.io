@@ -12,7 +12,9 @@ tags:
 categories: 
   - types
 is_published: true
-toc: true
+show_date: true
+date: "2023-02-19"
+description: "이번글을 통해서 공변성과 반공변성에 대해서 알아보며, Rust의 API를 인용하여 Typescript에서 어떻게 타입 안전(type-safety)한 코드를 작성할 수 있는지 알아봅시다."
 ---
 
 

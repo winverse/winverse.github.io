@@ -1,6 +1,6 @@
 ---
 author: winverse
-title:  "[Docker] 다중 컨테이너 애플리케이션 구축하기"
+title:  "[Docker] 2.다중 컨테이너 애플리케이션 구축하기"
 tags: 
   - docker
 categories: 
@@ -257,4 +257,4 @@ docker stop mongodb node-back react-front
 다중 애플리케이션을 작동시키는 방법을 간략하게 알아보았으며 이를 통해서 Docker를 통한 개발과 여러 flag들을 다뤄보며 익숙해지는 시간을 가졌습니다. 그러나 애플리케이션을 동작시키기 위한 command가 굉장히 길어지는 것을 알 수 있는데요. 이를 해결하기 위해서 Docker-compose라는 것을 배워보며 문제를 해결해보도록 하겠습니다.
 
 # 시리즈
-- [1. [Docker] 기본 개념 정리 및 자주 사용하는 Command](/infra/2023/03/30/docker-basic-command.html)
+[1. [Docker] 기본 개념 정리 및 자주 사용하는 Command](/infra/docker-basic-command)

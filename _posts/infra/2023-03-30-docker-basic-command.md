@@ -1,6 +1,6 @@
 ---
 author: winverse
-title:  "[Docker] 기본 개념 정리 및 자주 사용하는 Command"
+title:  "[Docker] 1.기본 개념 정리 및 자주 사용하는 Command"
 categories: 
     - infra
 tags: 
@@ -165,4 +165,4 @@ docker network connect my-network my-container
 
 
 # 시리즈
-- [2. [Docker] 다중 컨테이너 애플리케이션 구축하기](/infra/2023/03/30/docker-handle-multi-container.html)
+[2. [Docker] 다중 컨테이너 애플리케이션 구축하기](/infra/docker-handle-multi-container)

@@ -7,7 +7,9 @@ tags:
 categories: 
   - Typescript
 is_published: true
-toc: true
+show_date: true
+date: "2023-02-21"
+description: "이번 글을 통해서 타입스크립트의 타입 시스템에 대해서 알아보고 더욱 견고한 소프트웨어를 만들어보는 방법에 대해서 알아봅시다."
 ---
 
 
