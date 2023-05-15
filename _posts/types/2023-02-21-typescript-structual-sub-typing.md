@@ -1,11 +1,13 @@
 ---
-layout: post
 author: winverse
 title:  "잉여속성 체크와 구조적 서브 타이핑 (Feat: Typescript)"
-description: 이번 글을 통해서 타입스크립트의 타입 시스템에 대해서 알아보고 더욱 견고한 소프트웨어를 만들어보는 방법에 대해서 알아봅시다.
-tags: Typescript Type-level-system
-category: types
+tags: 
+  - Typescript 
+  - Type-level-system
+categories: 
+  - Typescript
 is_published: true
+toc: true
 ---
 
 

@@ -1,23 +1,19 @@
 ---
-layout: default
+layout: archive
 ---
-{% unless site.dash.show_author == false %}
-  {% include author.html %}
-{% endunless %}
+
 {{ content }}
 
-{% assign posts_count = paginator.posts | size %}
-  {% if posts_count > 0 %}
-    <h1 class="post-title">최신 글</h1>
-    <div class="post-links">
-      {% for post in paginator.posts %}
-        {% if post.is_published == true %}
-          {% include post-list.html %}
-        {% endif %}
-      {% endfor %}
-    </div>
-    {% include pagination.html %}
-    {% include tagcloud.html %}
-  {% else %}
-    <h2>no posts yet.</h2>
-  {% endif %}
+<h3 class="archive__subtitle">
+  {{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}
+</h3>
+
+{% if paginator %} {% assign posts = paginator.posts %} {% else %} {% assign
+posts = site.posts %} {% endif %} {% assign entries_layout = page.entries_layout
+| default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %} {% if post.is_published == true %} {% include
+  archive-single.html type=entries_layout %} {% endif %} {% endfor %}
+</div>
+
+{% include paginator.html %}

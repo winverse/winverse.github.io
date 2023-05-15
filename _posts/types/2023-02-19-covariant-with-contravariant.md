@@ -1,11 +1,18 @@
 ---
-layout: post
 author: winverse
 title:  "공변성(covariant)과 반공변성(contravariant)"
-description: 이번 글을 통해서 공변성과 반공변성에 대해서 알아보며, Rust의 API를 인용하여 Typescript에서 어떻게 타입 안전(type-safety)한 코드를 작성할 수 있는지 알아봅시다.
-tags: 공변성 반공변성 Covariant Contravariant Type-level-system Typescript Rust
-category: types
+tags: 
+  - 공변성 
+  - 반공변성 
+  - Covariant 
+  - Contravariant 
+  - Type-level-system 
+  - Typescript 
+  - Rust
+categories: 
+  - types
 is_published: true
+toc: true
 ---
 
 

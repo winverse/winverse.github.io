@@ -1,11 +1,16 @@
 ---
-layout: post
 author: winverse
 title:  "인터럽트(interrupt) 그리고 DMA와 고성능 소켓"
-description: 이번 글을 통해서 OS에서 사용되는 인터럽트의 종류를 알아보며 고성능을 내기 위한 Socket 통신에 대해서 알아봅시다.
-tags: Interrupt DMA Socket
-category: os
+tags: 
+  - Interrupt 
+  - DMA 
+  - Socket
+category: 
+  - os
 is_published: true
+show_date: true
+date: "2023-03-03"
+description: "이번 글을 통해서 OS에서 사용되는 인터럽트의 종류를 알아보며 고성능을 내기 위한 Socket 통신에 대해서 알아봅시다."
 ---
 
 # 외부 인터럽트
