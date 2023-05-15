@@ -11,6 +11,8 @@ tags:
 categories: 
   - oop
 is_published: true
+show_date: true
+date: "2023-03-15"
 ---
 
 # 1. 문제 인식

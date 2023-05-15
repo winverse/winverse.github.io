@@ -2,9 +2,8 @@
 layout: archive
 ---
 
-{{ content }}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
+{{ content }} {% assign entries_layout = page.entries_layout | default: 'list'
+%}
+<div class="entries-{{ entries_layout }} sss">
   {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
 </div>

@@ -6,6 +6,9 @@ categories:
 tags: 
     - docker
 is_published: true
+show_date: true
+date: "2023-03-30"
+description: "왜 Docker를 사용해야하는지, Image와 Container의 개념을 이해하고 자주 사용하는 Command를 정리합니다."
 ---
 
 # 여기서 배우게 될 것들
