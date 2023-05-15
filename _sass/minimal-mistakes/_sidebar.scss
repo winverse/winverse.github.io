@@ -194,6 +194,10 @@
   z-index: 20;
   cursor: pointer;
 
+  @include breakpoint(max-width $x-small - 25px) {
+    display: none !important;
+  }
+
   li:last-child {
     a {
       margin-bottom: 0;
