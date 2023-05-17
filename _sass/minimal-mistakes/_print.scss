@@ -98,7 +98,10 @@
     border: 0;
     display: block;
     max-width: 100% !important;
-    vertical-align: middle;
+
+    @include breakpoint($large) {
+      width: 100%  !important;
+    }
   }
 
   hr {

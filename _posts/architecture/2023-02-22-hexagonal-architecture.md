@@ -86,7 +86,7 @@ Application Business Rules은 소프트웨어 애플리케이션의 핵심 로�
 - 가장 중요한 것은 업무 규칙(Entity)이 세부 사항을 변경해도 영향을 받지 않는 다는 것 입니다.
 
 # 4.Hexagonal architecture
-<img src="https://bit.ly/41p0F1M"  alt="hexagonal Architecture" style="width: 500px; height: 270px;">
+<img src="https://bit.ly/41p0F1M"  alt="hexagonal Architecture" style="width: 100%;">
 
 ## 4-1.특징
 Hexagonal architecture 혹은 Ports and Adapters Architecture라고 불리는 아키텍처는 클린 아키텍처의 원칙을 기반으로 하며, 특히 in & out port와 어댑터를 통한 `인터페이스`를 더욱 강조하여 안팎의 관심사를 분리하고 독립적으로 각자의 역할에 충실하기 위한 방안입니다. 또한 의존성 방향이 클린 아키텍처와 마찬가지로 안쪽으로만 향하도록 하여 외부의 변화로부터 내부의 핵심 업무 규칙 즉 도메인을 철저하게 보호하게 됩니다.
@@ -97,7 +97,7 @@ Hexagonal architecture 혹은 Ports and Adapters Architecture라고 불리는 �
 ## 4-3.정리
 Hexagonal architecture에서는 인터페이스를 표준화하고, 외부와 내부를 분리하여 시스템의 유연성과 확장성을 높이기 위한 방법론입니다. 이 패턴은 애플리케이션을 여러 계층으로 나누어 의존성을 분리하고, 유지 보수와 확장성을 쉽게 만들어 줍니다.
 
-# 참고
+# Reference
 1. [https://blog.jiniworld.me/176](https://blog.jiniworld.me/176)
 2. [코드로 이해하기 헥사고날 아키텍트](https://happy-coding-day.tistory.com/entry/%ED%97%A5%EC%82%AC%EA%B3%A0%EB%82%A0-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98Hexagonal-Architecture-%EC%BD%94%EB%93%9C%EB%A1%9C-%EC%9D%B4%ED%95%B4%ED%95%B4%EB%B3%B4%EA%B8%B0-%EB%AF%B8%EC%99%84%EC%84%B1)
 3. [기획자님들! 개발자가 아키텍처에 집착하는 이유, 쉽게 알려드립니다](https://youtu.be/saxHxoUeeSw)
