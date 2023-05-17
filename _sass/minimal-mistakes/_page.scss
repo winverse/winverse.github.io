@@ -310,6 +310,9 @@ body {
   a {
     color: inherit;
   }
+  span + span {
+    margin-left: 0.6rem;
+  }
 }
 
 .page__meta-title {
