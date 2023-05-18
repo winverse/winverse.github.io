@@ -165,5 +165,5 @@ docker network connect my-network my-container
 
 
 # 시리즈
-[2. [Docker] 다중 컨테이너 애플리케이션 구축하기](/infra/docker-handle-multi-container)
+[2. [Docker] 다중 컨테이너 애플리케이션 구축하기](/infra/docker-handle-multi-container)  
 [3. [Docker] Docker compose를 이용한 다중 컨테이너 구현](/infra/docker-compose)
