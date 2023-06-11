@@ -6,5 +6,9 @@ Just blog, writhing about me.
 
 # Run
 ```sh
+gem install jekyll-gist
+gem install jekyll-sitemap
+gem install jekyll-include-cache
+
 bundle exec jekyll serve
 ```
